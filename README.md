@@ -1,1 +1,1 @@
-# ost_sales_auto_sequence
+Sales Order Line Auto Sequence
