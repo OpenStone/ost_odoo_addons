@@ -7,9 +7,9 @@ from openerp.exceptions import ValidationError
 class sale_order_line(models.Model):
     _inherit = "sale.order.line"
 
-    @api.multi
-    def default_get(self):
-        res = {}
+    @api.model
+    def default_get(self, fields):
+        res = super(sale_order_line, self).default_get(fields)
         if self._context:
             context_keys = self._context.keys()
             next_sequence = 1
